@@ -1,11 +1,15 @@
 import { FaShoppingBag, FaUser, FaSearch } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../../services/firebaseConnection";
 
 export function Header() {
    const [menuAberto, setMenuAberto] = useState(false)
+   const { signed, loadingAuth } = useContext(AuthContext)
    const navigate = useNavigate()
    
    function handleMenuUser() {
@@ -22,6 +26,12 @@ export function Header() {
       handleMenuUser()
 
       navigate("/login")
+   }
+
+   function handleLogout() {
+      signOut(auth)
+      alert("SESSÃO FINALIZADA")
+      return
    }
 
    return (
@@ -68,18 +78,36 @@ export function Header() {
                   <div className="absolute bg-zinc-900 w-60 right-5 top-9 p-4 rounded-md select-none">
                      <IoMdClose size={24} className="absolute right-2 top-2 text-white cursor-pointer" onClick={handleMenuUser}/>
                      <div className="flex flex-col items-center mt-6">
-                        <span className="text-white">Minha Conta</span>
+                        <Link to="/myaccount">
+                           <span className="text-white" onClick={handleSession}>Minha Conta</span>
+                        </Link>
                         <div className="w-full h-px bg-slate-200 my-2"></div>
-                        <span className="text-white">Meus Pedidos</span>
+                        <Link to="/order">
+                           <span className="text-white" onClick={handleSession}>Meus Pedidos</span>
+                        </Link>
                         <div className="w-full h-px bg-slate-200 my-2"></div>
                         
-                        <button 
-                           className="mt-14 mb-2 bg-zinc-300 w-3/4 h-8 rounded-md" onClick={handleSession}
-                        >
-                           Iniciar Sessão
-                        </button>
-                        <p className="text-xs text-white">Ainda não é membro ?</p>
-                        <strong className="text-white tracking-widest cursor-pointer" onClick={handleSession}>Cadastrar-se</strong>
+                        {!signed && !loadingAuth && (
+                           <>
+                              <button 
+                                 className="mt-14 mb-2 bg-zinc-300 w-3/4 h-8 rounded-md" onClick={handleSession}
+                              >
+                                 Iniciar Sessão
+                              </button>
+                              <p className="text-xs text-white">Ainda não é membro ?</p>
+                              <strong className="text-white tracking-widest cursor-pointer" onClick={handleSession}>Cadastrar-se</strong>
+                           </>
+                        )}
+
+                        {signed && !loadingAuth && (
+                           <>
+                              <button 
+                                 className="mt-20 mb-2 bg-zinc-300 w-3/4 h-8 rounded-md" onClick={handleLogout}
+                              >
+                                 Encerrar sessão
+                              </button>
+                           </>
+                        )}
                      </div>
                   </div>
                )}
