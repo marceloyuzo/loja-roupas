@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Private><Order/></Private>
+      },
+      {
+        path: "/cart",
+        element: <Cart/>
       }
     ]
-  },
-  {
-      path: "/cart",
-      element: <Cart/>
   }
 ])
 

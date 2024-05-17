@@ -1,14 +1,47 @@
 import { Container } from "../../components/Container/Container"
 import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
 
 export function Home() {
+
    return (
       <Container>
-         <main>
-            <img
-               className="w-full "
-               src="https://imgnike-a.akamaihd.net/branding/home-sbf/touts/Banner-corinthians-antiracista-03-05-desktop.jpg" alt="Imagem de exposição, coleção nova, novidades" 
-            />
+         <main className="relative flex flex-col justify-center z-10">
+            <div className="">
+               <Swiper
+                  modules={[Navigation, Pagination, Autoplay ]}
+                  slidesPerView={1}
+                  pagination={{clickable:true}}
+                  loop
+                  navigation
+                  autoplay ={{delay:20000}}
+                  autoHeight
+                  
+               >
+                  
+                  <SwiperSlide>
+                     <img
+                        className="w-full select-none"
+                        src="https://imgnike-a.akamaihd.net/branding/home-sbf/touts/Banner-corinthians-antiracista-03-05-desktop.jpg" alt="Imagem de exposição, coleção nova, novidades" 
+                     />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <img
+                        className="w-full select-none"
+                        src="https://br.puma.com/media/contentmanager/content/PUMA---LEISURE-PALMEIRAS---Social-Post-Esta%CC%81tico--4x5---1440x500.jpg" alt="Imagem de exposição, coleção nova, novidades" 
+                     />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <img
+                        className="w-full select-none"
+                        src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/h29/h31/h00/h00/11951746023454/UltraRangeNeoVR3-hero-01-copiar.jpg" alt="Imagem de exposição, coleção nova, novidades" 
+                     />
+                  </SwiperSlide>
+
+               </Swiper>
+            </div>
+            
 
             <section className="mt-12 mb-4">
                <strong>Compre por Categoria</strong>
