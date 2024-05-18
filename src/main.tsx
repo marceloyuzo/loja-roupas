@@ -6,6 +6,7 @@ import './index.css'
 
 import { RouterProvider } from 'react-router-dom'
 import AuthProvider from './contexts/AuthContext'
+import CartProvider from './contexts/CartContext'
 
 import { register } from 'swiper/element'
 register()
@@ -18,7 +19,9 @@ import 'swiper/css/scrollbar'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router}/>
+      <CartProvider>
+        <RouterProvider router={router}/>
+      </CartProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

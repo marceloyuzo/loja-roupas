@@ -1,0 +1,470 @@
+{
+   "products": [
+     { 
+       "id": 1, 
+       "name": "Camisa Polo Nike Dri-FIT Corinthians Victory Masculina",
+       "color": "Amarelo",
+       "filters": [
+         "Masculino",
+         "Camiseta"
+       ],
+       "size": [
+         "P",
+         "M",
+         "G",
+         "GG"
+       ],
+       "price": 284.99,
+       "cover": [
+         "https://imgnike-a.akamaihd.net/768x768/0277060L.jpg",
+         "https://imgnike-a.akamaihd.net/768x768/0277060LA1.jpg",
+         "https://imgnike-a.akamaihd.net/768x768/0277060LA2.jpg",
+         "https://imgnike-a.akamaihd.net/768x768/0277060LA3.jpg"
+       ]
+     },
+     { 
+       "id": 2, 
+       "name": "Camisa Polo Nike Court Dri-FIT Masculina",
+       "color": "Verde",
+       "filters": [
+         "Masculino",
+         "Camiseta"
+       ],
+       "size": [
+         "P",
+         "M",
+         "G",
+         "GG"
+       ],
+       "price": 246.99,
+       "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/013632NX.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/013632NXA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/013632NXA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/013632NXA3.jpg"
+      ]
+     },
+     { 
+      "id": 3, 
+      "name": "Camiseta NikeCourt Masculina",
+      "color": "Branco",
+      "filters": [
+        "Masculino",
+        "Camiseta"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 161.49,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0071775D.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0071775DA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0071775DA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0071775DA3.jpg"
+      ]
+    },
+    { 
+      "id": 4, 
+      "name": "Camiseta Jordan Jumpman Masculina",
+      "color": "Branco",
+      "filters": [
+        "Masculino",
+        "Camiseta"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 132.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/02634451.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02634451A1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02634451A2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02634451A3.jpg"
+      ]
+    },
+    { 
+      "id": 5, 
+      "name": "Camiseta Jordan Jumpman Masculina",
+      "color": "Vermelho",
+      "filters": [
+        "Masculino",
+        "Camiseta"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 151.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/026344PA.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026344PAA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026344PAA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026344PAA3.jpg"
+      ]
+    },
+    { 
+      "id": 6, 
+      "name": "Camiseta Nike SB x Yuto Horigome Masculina",
+      "color": "Verde",
+      "filters": [
+        "Masculino",
+        "Camiseta"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 246.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/027929NX.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/027929NXA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/027929NXA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/027929NXA3.jpg"
+      ]
+    },
+    { 
+      "id": 7, 
+      "name": "Calça Nike Therma-FIT Masculina",
+      "color": "Cinza",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 370.49,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0257047T.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0257047TA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0257047TA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0257047TA6.jpg"
+      ]
+    },
+    { 
+      "id": 8, 
+      "name": "Calça Nike Club Fleece Masculina",
+      "color": "Cinza",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 161.49,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0245617T.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0245617TA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0245617TA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0245617TA5.jpg"
+      ]
+    },
+    { 
+      "id": 9, 
+      "name": "Calça Nike Trail Dri-FIT Masculina",
+      "color": "Preto",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 379.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/026097ID.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026097IDA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026097IDA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/026097IDA7.jpg"
+      ]
+    },
+    { 
+      "id": 10, 
+      "name": "Calça Jordan Woven Masculina",
+      "color": "Preto",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 569.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/028209ID.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/028209IDA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/028209IDA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/028209IDA6.jpg"
+      ]
+    },
+    { 
+      "id": 11, 
+      "name": "Calça Nike Tech Fleece Masculina",
+      "color": "Cinza",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 436.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0271757T.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0271757TA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0271757TA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0271757TA10.jpg"
+      ]
+    },
+    { 
+      "id": 12, 
+      "name": "Calça Nike Brasil Strike Elite Masculina",
+      "color": "Azul",
+      "filters": [
+        "Masculino",
+        "Calça"
+      ],
+      "size": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "price": 664.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/02258815.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02258815A1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02258815A2.jpg"
+      ]
+    },
+    { 
+      "id": 13, 
+      "name": "Nike SB Dunk Low Pro",
+      "color": "Preto",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 949.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/016622IM.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/016622IMA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/016622IMA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/016622IMA3.jpg"
+      ]
+    },
+    { 
+      "id": 14, 
+      "name": "Tênis Jordan Delta 3 Low Masculino",
+      "color": "Branco",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 655.49,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/02265451.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02265451A1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02265451A2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02265451A3.jpg"
+      ]
+    },
+    { 
+      "id": 15, 
+      "name": "Tênis Nike BRSB Masculino",
+      "color": "Branco",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 474.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0175015A.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0175015AA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0175015AA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0175015AA3.jpg"
+      ]
+    },
+    { 
+      "id": 16, 
+      "name": "Tênis Air Jordan Legacy 312 Low Masculino",
+      "color": "Branco",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 883.49,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0166925A.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0166925AA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0166925AA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0166925AA3.jpg"
+      ]
+    },
+    { 
+      "id": 17, 
+      "name": "Tênis NikeCourt Zoom NXT Masculino",
+      "color": "Azul",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 102.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0136111E.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0136111EA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0136111EA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0136111EA3.jpg"
+      ]
+    },
+    { 
+      "id": 18, 
+      "name": "Terminator Low Sesame and Coconut Milk",
+      "color": "Sesame and Coconut Milk",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 1199.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/0283883X.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0283883XA1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0283883XA2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/0283883XA3.jpg"
+      ]
+    },
+    { 
+      "id": 19, 
+      "name": "Tênis Nike Air Max Alpha Trainer 5 Masculino",
+      "color": "Cinza",
+      "filters": [
+        "Masculino",
+        "Calçado"
+      ],
+      "size": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "price": 759.99,
+      "cover": [
+        "https://imgnike-a.akamaihd.net/768x768/02281082.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02281082A1.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02281082A2.jpg",
+        "https://imgnike-a.akamaihd.net/768x768/02281082A3.jpg"
+      ]
+    }
+   ]
+ }

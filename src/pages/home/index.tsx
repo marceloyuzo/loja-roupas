@@ -1,23 +1,43 @@
 import { Container } from "../../components/Container/Container"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import { Navigation, Autoplay } from "swiper/modules"
+import { api } from "../../services/api"
+import { useEffect, useState } from "react"
+
+export interface ProductsProps {
+   id: string,
+   name: string,
+   color: string,
+   filters: string[],
+   size: string[],
+   price: number,
+   cover: string[],
+}
 
 export function Home() {
+   const [products, setProducts] = useState<ProductsProps[]>([])
+
+   useEffect(() => {
+      async function getProducts() {
+         const response = await api.get("/products")
+         setProducts(response.data)
+      }
+        
+      getProducts()
+   }, [])
 
    return (
       <Container>
          <main className="relative flex flex-col justify-center z-10">
-            <div className="">
+            <div>
                <Swiper
-                  modules={[Navigation, Pagination, Autoplay ]}
+                  modules={[Navigation, Autoplay ]}
                   slidesPerView={1}
-                  pagination={{clickable:true}}
                   loop
                   navigation
                   autoplay ={{delay:20000}}
                   autoHeight
-                  
                >
                   
                   <SwiperSlide>
@@ -93,48 +113,48 @@ export function Home() {
                <Link to="/" className="ml-6 text-xs">
                   Ver Mais
                </Link>
+               
+               {products && (
+                  <Swiper
+                     modules={[Navigation, Autoplay]}
+                     slidesPerView={2}
+                     slidesPerGroup={2}
+                     loop
+                     navigation
+                     autoplay ={{delay:20000}}
+                     spaceBetween={40}
+                     breakpoints={{
+                        1024: {
+                           slidesPerView: 4,
+                           slidesPerGroup: 4
+                        },
+                        768: {
+                           slidesPerView: 3,
+                           slidesPerGroup: 3
+                        }
+                     }}     
+                  >
+                     {products?.map((product) => (
+                        <SwiperSlide key={product.id}>
+                           <Link to={`/product/${product.id}`}>
+                              <div className="w-auto flex flex-col">
+                                 <img 
+                                    className="rounded-md mb-2 w-72"
+                                    src={product.cover[0]}
+                                    alt={product.name}
+                                 />
+                           
+                                 <strong className="text-ellipsis overflow-hidden whitespace-nowrap">{product.name}</strong>
 
-               <div className="mt-4 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 px-10">
-                  <div className="w-auto flex flex-col">
-                     <img 
-                        className="rounded-md mb-2"
-                        src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                        alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" />
-                     
-                     <strong className="text-ellipsis overflow-hidden whitespace-nowrap">TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI</strong>
+                                 {Number(product.price).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}
+                              </div>
+                           </Link>
+                        </SwiperSlide>
 
-                     R$ 899,99
-                  </div>
-                  <div className="w-auto flex flex-col">
-                     <img 
-                        className="rounded-md mb-2"
-                        src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                        alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" />
-                     
-                     <strong className="text-ellipsis overflow-hidden whitespace-nowrap">TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI</strong>
-
-                     R$ 899,99
-                  </div>
-                  <div className="w-auto flex flex-col">
-                     <img 
-                        className="rounded-md mb-2"
-                        src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                        alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" />
-                     
-                     <strong className="text-ellipsis overflow-hidden whitespace-nowrap">TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI</strong>
-
-                     R$ 899,99
-                  </div>
-                  <div className="w-auto flex flex-col">
-                     <img 
-                        className="rounded-md mb-2"
-                        src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                        alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" />
-                     
-                     <strong className="text-ellipsis overflow-hidden whitespace-nowrap">TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI</strong>
-                     R$ 899,99
-                  </div>
-               </div>
+                     ))}
+                  </Swiper>
+               )}
+               
             </section>
 
          </main>

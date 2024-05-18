@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../services/firebaseConnection";
+import { CartContext } from "../../contexts/CartContext";
 
 export function Header() {
    const [menuAberto, setMenuAberto] = useState(false)
    const { signed, loadingAuth } = useContext(AuthContext)
+   const { cartAmount } = useContext(CartContext)
    const navigate = useNavigate()
 
 
@@ -73,9 +75,11 @@ export function Header() {
                <div className="flex gap-5">
                   <Link to="/cart">
                      <FaShoppingBag size={28}/>
-                     <span className="absolute right-16 top-14 px-2 bg-zinc-600 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs select-none">
-                        1
-                     </span>
+                     {cartAmount > 0 && (
+                        <span className="absolute top-9 right-16 px-2 bg-zinc-600 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs select-none md:right-16 md:top-14">
+                           {cartAmount}
+                        </span>
+                     )}
                   </Link>
                   <FaUser size={28} onClick={handleMenuUser} className="cursor-pointer"/>
                   {menuAberto && (
