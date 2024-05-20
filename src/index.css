@@ -9,4 +9,7 @@
    font-family:'Roboto Mono', monospace
 }
 
-
+html, body {
+   height: 100%;
+   margin: 0;
+}

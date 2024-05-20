@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
    return (
-      <div className="relative w-full bg-zinc-300 h-32 bottom-0 mt-24">
-         <footer className="flex flex-col justify-center items-center w-full h-full gap-1">
+      <div className="w-full bottom-0 mt-24">
+         <footer className="flex flex-col justify-center items-center w-full h-32 gap-1 bg-zinc-300">
             <strong>Redes Sociais</strong>
             <div className="flex justify-between gap-3 max-w-32">
                <Link to="https://instagram.com" target="_blank">

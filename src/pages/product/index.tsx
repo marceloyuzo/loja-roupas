@@ -21,19 +21,17 @@ export function Product() {
       getProduct()
    }, [])
 
-   function handleSize(tam: string) {
-      if(size === tam) {
+   function handleSize(selectSize: string) {
+      if(size === selectSize) {
          setSize("")
          return
       }
-
-      setSize(tam)
-      return
+      setSize(selectSize)
    }
 
    return(
       <Container>
-         <main className="">
+         <main>
             {product && (
                <section className="flex w-full gap-16 flex-col custom:flex-row" key={product.id}>
                   <div className="flex gap-4 justify-center">
@@ -62,13 +60,13 @@ export function Product() {
                         )}
                         {product.size && (
                            <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
-                              {product.size.map((tam) => (
+                              {product.size.map((selectSize) => (
                                  <div 
-                                    className={`bg-zinc-500 text-center rounded-sm w-full py-1 ${tam !== size ? 'bg-zinc-200' : 'bg-zinc-500'} cursor-pointer`}
-                                    key={tam}
-                                    onClick={() => handleSize(tam)}
+                                    className={`text-center rounded-sm w-full py-1 ${selectSize !== size ? 'bg-zinc-200' : 'bg-zinc-500'} cursor-pointer`}
+                                    key={selectSize}
+                                    onClick={() => handleSize(selectSize)}
                                  >
-                                    {tam}
+                                    {selectSize}
                                  </div>
                               ))}
                            </div>

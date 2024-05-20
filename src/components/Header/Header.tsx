@@ -46,15 +46,15 @@ export function Header() {
                      <h1>LOJA DE ROUPA</h1>
                   </Link>
                </div>
-               <div className="relative w-96 md:w-auto">
+               <div className="relative w-96 response-920:w-auto">
                   <input 
-                     className="w-5/6 rounded-md px-2 h-8 border-2 outline-none flex justify-center mx-auto"
+                     className="w-5/6 rounded-md px-2 h-8 border-2 outline-none flex justify-center mx-auto "
                      type="text" 
                      placeholder="Buscar..."
 
                   />
-                  <FaSearch size={16} className="absolute top-2 right-12"/>
-                  <nav className="hidden justify-between gap-8 mt-4  md:flex">
+                  <FaSearch size={16} className="absolute top-2 right-14"/>
+                  <nav className="hidden justify-between gap-8 mt-4  response-920:flex">
                      <Link to="/products">
                         <span>Lançamentos</span>   
                      </Link>
@@ -76,7 +76,7 @@ export function Header() {
                   <Link to="/cart">
                      <FaShoppingBag size={28}/>
                      {cartAmount > 0 && (
-                        <span className="absolute top-9 right-16 px-2 bg-zinc-600 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs select-none md:right-16 md:top-14">
+                        <span className="absolute top-9 right-16 px-2 bg-zinc-600 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs select-none md:right-16 response-920:top-14">
                            {cartAmount}
                         </span>
                      )}

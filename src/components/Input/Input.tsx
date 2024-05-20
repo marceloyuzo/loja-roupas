@@ -11,7 +11,7 @@ interface InputProps {
 
 export function Input({type, placeholder, name, error, register, rules}: InputProps) {
    return (
-      <div>
+      <div className="relative w-full">
          <input 
             className="w-full border-2 rounded-md h-11 px-2"
             type={type}
@@ -19,7 +19,7 @@ export function Input({type, placeholder, name, error, register, rules}: InputPr
             id={name}
             {...register(name, rules)}
          />
-         {error && <p className="ml-1 mb-2 text-red-600">{error}</p>}
+         {error && <p className="absolute top-0 right-2 text-red-600">{error}</p>}
       </div>
    )
 }

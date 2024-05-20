@@ -89,7 +89,7 @@ export function Login() {
       <Container>
          <main className="flex justify-between mt-28">
             <section className="mx-auto w-96 flex flex-col justify-start">
-               <h2 className="text-center my-8">Tenho cadastro</h2>
+               <h2 className="text-center my-8 text-2xl">Tenho cadastro</h2>
 
                <form
                   onSubmit={handleSubmitLogin(handleLogin)}
@@ -127,7 +127,7 @@ export function Login() {
             <div className="h-auto w-px bg-slate-600 mx-1 mt-10"></div>
 
             <section className="m-auto w-96">
-               <h2 className="text-center my-8">Quero me cadastrar</h2>
+               <h2 className="text-center my-8 text-2xl">Quero me cadastrar</h2>
 
                <form 
                   onSubmit={handleSubmitRegister(handleRegister)}

@@ -14,7 +14,9 @@ export default {
         'image': '620px'
       },
       screens: {
-        'custom': '1120px'
+        'custom': '1120px',
+        'response-920': '920px',
+        'response-650': '650px'
       }
     },
   },
