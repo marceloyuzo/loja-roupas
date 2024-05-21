@@ -16,7 +16,8 @@ export default {
       screens: {
         'custom': '1120px',
         'response-920': '920px',
-        'response-650': '650px'
+        'response-650': '650px',
+        'response-1080': '1080px',
       }
     },
   },

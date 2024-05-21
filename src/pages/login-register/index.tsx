@@ -101,6 +101,7 @@ export function Login() {
                      name="emailLogin"
                      register={registerLogin}
                      error={errorsLogin.emailLogin?.message}
+                     readOnly={false}
                   />
 
                   <p className="ml-2 mt-4">Senha</p>
@@ -110,6 +111,7 @@ export function Login() {
                      name="passwordLogin"
                      register={registerLogin}
                      error={errorsLogin.passwordLogin?.message}
+                     readOnly={false}
                   />
 
                   <button 
@@ -139,6 +141,7 @@ export function Login() {
                      name="emailRegister"
                      register={registerRegister}
                      error={errorsRegister.emailRegister?.message}
+                     readOnly={false}
                   />
 
                   <p className="ml-2 mt-4">Nome</p>
@@ -148,6 +151,7 @@ export function Login() {
                      name="nameRegister"
                      register={registerRegister}
                      error={errorsRegister.nameRegister?.message}
+                     readOnly={false}
                   />
 
                   <p className="ml-2 mt-4">Sobrenome</p>
@@ -157,6 +161,7 @@ export function Login() {
                      name="lnameRegister"
                      register={registerRegister}
                      error={errorsRegister.lnameRegister?.message}
+                     readOnly={false}
                   />
 
                   <p className="ml-2 mt-4">Senha</p>
@@ -166,6 +171,7 @@ export function Login() {
                      name="passwordRegister"
                      register={registerRegister}
                      error={errorsRegister.passwordRegister?.message}
+                     readOnly={false}
                   />
 
                   <p className="ml-2 mt-4">Confirmação de senha</p>
@@ -175,6 +181,7 @@ export function Login() {
                      name="cpasswordRegister"
                      register={registerRegister}
                      error={errorsRegister.cpasswordRegister?.message}
+                     readOnly={false}
                   />
 
                   

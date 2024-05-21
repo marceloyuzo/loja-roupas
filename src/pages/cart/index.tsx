@@ -102,7 +102,8 @@ export function Cart() {
          email: data.email,
          paymentMethod: data.paymentMethod,
          totalPrice: Number(totalPrice) + 15,
-         totalAmount: totalAmount
+         totalAmount: totalAmount,
+         created: new Date()
       })
       .then(() => {
          resetCart()
@@ -195,6 +196,7 @@ export function Cart() {
                                           name="state"
                                           register={register}
                                           error={errors.state?.message}
+                                          readOnly={false}
                                        />
 
                                        <Input 
@@ -203,6 +205,7 @@ export function Cart() {
                                           name="city"
                                           register={register}
                                           error={errors.city?.message}
+                                          readOnly={false}
                                        />
 
                                        <Input 
@@ -211,6 +214,7 @@ export function Cart() {
                                           name="district"
                                           register={register}
                                           error={errors.district?.message}
+                                          readOnly={false}
                                        />
                                     </div>
 
@@ -222,6 +226,7 @@ export function Cart() {
                                              name="address"
                                              register={register}
                                              error={errors.address?.message}
+                                             readOnly={false}
                                           />
                                        </div>
                                        <div className="w-1/4">
@@ -231,6 +236,7 @@ export function Cart() {
                                              name="numberAdress"
                                              register={register}
                                              error={errors.numberAdress?.message}
+                                             readOnly={false}
                                           />
                                        </div>
                                     </div>
@@ -246,6 +252,7 @@ export function Cart() {
                                           name="name"
                                           register={register}
                                           error={errors.name?.message}
+                                          readOnly={false}
                                        />
 
                                        <Input 
@@ -254,6 +261,7 @@ export function Cart() {
                                           name="lname"
                                           register={register}
                                           error={errors.lname?.message}
+                                          readOnly={false}
                                        />
 
                                        <Input 
@@ -262,6 +270,7 @@ export function Cart() {
                                           name="cpf"
                                           register={register}
                                           error={errors.cpf?.message}
+                                          readOnly={false}
                                           
                                        />
                                     </div>
@@ -274,6 +283,7 @@ export function Cart() {
                                              name="numberPhone"
                                              register={register}
                                              error={errors.numberPhone?.message}
+                                             readOnly={false}
                                           />
                                        </div>
                                        <div className="w-4/6">
@@ -283,6 +293,7 @@ export function Cart() {
                                              name="email"
                                              register={register}
                                              error={errors.email?.message}
+                                             readOnly={false}
                                           />
                                        </div>
                                     </div>
