@@ -58,17 +58,14 @@ export function Header() {
                      <Link to="/products">
                         <span>Lançamentos</span>   
                      </Link>
-                     <Link to="/products">
+                     <Link to="/products?filter=Masculino">
                         <span>Masculino</span>
                      </Link>
-                     <Link to="/products">
+                     <Link to="/products?filter=Feminino">
                         <span>Feminino</span>   
                      </Link>
-                     <Link to="/products">
+                     <Link to="/products?filter=Infantil">
                         <span>Infantil</span>   
-                     </Link>
-                     <Link to="/products">
-                        <span>Ofertas</span>
                      </Link>
                   </nav>
                </div>

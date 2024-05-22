@@ -9,7 +9,8 @@ export interface ProductsProps {
    id: string,
    name: string,
    color: string,
-   filters: string[],
+   gender: string[],
+   category: string[],
    size: string[],
    price: number,
    cover: string[],
@@ -19,13 +20,14 @@ export function Home() {
    const [products, setProducts] = useState<ProductsProps[]>([])
 
    useEffect(() => {
-      async function getProducts() {
-         const response = await api.get("/products")
-         setProducts(response.data)
-      }
-        
       getProducts()
+      
    }, [])
+   
+   async function getProducts() {
+      const response = await api.get("/products")
+      setProducts(response.data)
+   }
 
    return (
       <Container>
@@ -67,41 +69,45 @@ export function Home() {
                <strong>Compre por Categoria</strong>
 
                <div className="mt-4 grid grid-cols-2 gap-6 lg:grid-cols-4 px-10">
-                  <div className="w-auto flex">
-                     <Link to="/products">
+                  <div className="w-auto flex flex-col items-center">
+                     <Link to="/products?filter=Calçado">
                         <img 
                            className="rounded-md mb-2"
                            src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                           alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" 
+                           alt="CATEGORIA CALÇADO" 
                         />
                      </Link>
+                     <strong className="text-lg">CALÇADOS</strong>
                   </div>
-                  <div className="w-auto flex">
-                     <Link to="/products">
+                  <div className="w-auto flex flex-col items-center">
+                     <Link to="/products?filter=Camiseta">
                         <img 
                            className="rounded-md mb-2"
-                           src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                           alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" 
+                           src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/dc06adf61aab4e499ba9aefb00f92577_9366/Camiseta_Adicolor_Classics_3-Stripes_Vermelho_IA4852_01_laydown.jpg" 
+                           alt="CATEGORIA CAMISETA" 
                         />
                      </Link>
+                     <strong className="text-lg">CAMISETAS</strong>
                   </div>
-                  <div className="w-auto flex">
-                     <Link to="/products">
+                  <div className="w-auto flex flex-col items-center">
+                     <Link to="/products?filter=Calça">
                         <img 
                            className="rounded-md mb-2"
-                           src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                           alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" 
+                           src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/717d09f5b271468db7ac9120e8f69306_9366/Calca_Treino_Tiro_24_Preto_IP1952_21_model.jpg" 
+                           alt="CATEGORIA CALÇA" 
                         />
                      </Link>
+                     <strong className="text-lg">CALÇAS</strong>
                   </div>
-                  <div className="w-auto flex">
-                     <Link to="/products">
+                  <div className="w-auto flex flex-col items-center">
+                     <Link to="/products?filter=Acessório">
                         <img 
                            className="rounded-md mb-2"
-                           src="https://secure-static.vans.com.br/medias/sys_master/vans/vans/ha7/h30/h00/h00/11952115056670/1003550650015U-01-BASEIMAGE-Lores.jpg" 
-                           alt="TÊNIS ULTRARANGE NEO VR3 COMPL. ULTRA NEO VR3 MULTI" 
+                           src="https://imgnike-a.akamaihd.net/360x360/026490ID.jpg" 
+                           alt="CATEGORIA ACESSÓRIO" 
                         />
                      </Link>
+                     <strong className="text-lg">ACESSÓRIOS</strong>
                   </div>
                </div>
             </section>

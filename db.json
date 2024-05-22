@@ -4,9 +4,11 @@
        "id": 1, 
        "name": "Camisa Polo Nike Dri-FIT Corinthians Victory Masculina",
        "color": "Amarelo",
-       "filters": [
-         "Masculino",
-         "Camiseta"
+       "gender": [
+         "Masculino"
+       ],
+       "category": [
+        "Camiseta"
        ],
        "size": [
          "P",
@@ -26,9 +28,11 @@
        "id": 2, 
        "name": "Camisa Polo Nike Court Dri-FIT Masculina",
        "color": "Verde",
-       "filters": [
-         "Masculino",
-         "Camiseta"
+       "gender": [
+         "Masculino"
+       ],
+       "category": [
+        "Camiseta"
        ],
        "size": [
          "P",
@@ -48,10 +52,12 @@
       "id": 3, 
       "name": "Camiseta NikeCourt Masculina",
       "color": "Branco",
-      "filters": [
-        "Masculino",
-        "Camiseta"
+      "gender": [
+        "Masculino"
       ],
+      "category": [
+        "Camiseta"
+       ],
       "size": [
         "P",
         "M",
@@ -70,10 +76,12 @@
       "id": 4, 
       "name": "Camiseta Jordan Jumpman Masculina",
       "color": "Branco",
-      "filters": [
-        "Masculino",
-        "Camiseta"
+      "gender": [
+        "Masculino"
       ],
+      "category": [
+        "Camiseta"
+       ],
       "size": [
         "P",
         "M",
@@ -92,10 +100,12 @@
       "id": 5, 
       "name": "Camiseta Jordan Jumpman Masculina",
       "color": "Vermelho",
-      "filters": [
-        "Masculino",
-        "Camiseta"
+      "gender": [
+        "Masculino"
       ],
+      "category": [
+        "Camiseta"
+       ],
       "size": [
         "P",
         "M",
@@ -114,10 +124,12 @@
       "id": 6, 
       "name": "Camiseta Nike SB x Yuto Horigome Masculina",
       "color": "Verde",
-      "filters": [
-        "Masculino",
-        "Camiseta"
+      "gender": [
+        "Masculino"
       ],
+      "category": [
+        "Camiseta"
+       ],
       "size": [
         "P",
         "M",
@@ -136,8 +148,10 @@
       "id": 7, 
       "name": "Calça Nike Therma-FIT Masculina",
       "color": "Cinza",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -158,8 +172,10 @@
       "id": 8, 
       "name": "Calça Nike Club Fleece Masculina",
       "color": "Cinza",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -180,8 +196,10 @@
       "id": 9, 
       "name": "Calça Nike Trail Dri-FIT Masculina",
       "color": "Preto",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -202,8 +220,10 @@
       "id": 10, 
       "name": "Calça Jordan Woven Masculina",
       "color": "Preto",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -224,8 +244,10 @@
       "id": 11, 
       "name": "Calça Nike Tech Fleece Masculina",
       "color": "Cinza",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -246,8 +268,10 @@
       "id": 12, 
       "name": "Calça Nike Brasil Strike Elite Masculina",
       "color": "Azul",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"
+      ],
+      "category": [
         "Calça"
       ],
       "size": [
@@ -267,8 +291,10 @@
       "id": 13, 
       "name": "Nike SB Dunk Low Pro",
       "color": "Preto",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -296,8 +322,10 @@
       "id": 14, 
       "name": "Tênis Jordan Delta 3 Low Masculino",
       "color": "Branco",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -325,8 +353,10 @@
       "id": 15, 
       "name": "Tênis Nike BRSB Masculino",
       "color": "Branco",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -354,8 +384,10 @@
       "id": 16, 
       "name": "Tênis Air Jordan Legacy 312 Low Masculino",
       "color": "Branco",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -383,8 +415,10 @@
       "id": 17, 
       "name": "Tênis NikeCourt Zoom NXT Masculino",
       "color": "Azul",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -412,8 +446,10 @@
       "id": 18, 
       "name": "Terminator Low Sesame and Coconut Milk",
       "color": "Sesame and Coconut Milk",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
@@ -441,8 +477,10 @@
       "id": 19, 
       "name": "Tênis Nike Air Max Alpha Trainer 5 Masculino",
       "color": "Cinza",
-      "filters": [
-        "Masculino",
+      "gender": [
+        "Masculino"      
+      ],
+      "category": [
         "Calçado"
       ],
       "size": [
