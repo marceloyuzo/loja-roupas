@@ -1,6 +1,7 @@
 import { createContext, ReactNode } from "react";
 import { useState } from "react";
 import { ProductsProps } from "../pages/home";
+import toast from "react-hot-toast";
 
 interface CartContextData {
    cart: CartProps[],
@@ -16,7 +17,8 @@ export interface CartProps {
    id: string,
    name: string,
    color: string,
-   filters: string[],
+   gender: string[],
+   category: string[],
    size: string[],
    price: number,
    cover: string[],
@@ -41,8 +43,7 @@ function CartProvider({ children }: CartProviderProps) {
       let cartList = cart
       
       if(size === "") {
-         alert("Selecione um tamanho")
-         // adicionar um toast depois
+         toast.error("Selecione um tamanho!")
          return
       }
       
@@ -52,6 +53,7 @@ function CartProvider({ children }: CartProviderProps) {
          
          setCart(cartList)
          totalResultCart(cartList)
+         toast.success("Produto adicionado ao carrinho.")
          return
       }
 
@@ -64,6 +66,7 @@ function CartProvider({ children }: CartProviderProps) {
 
       setCart(products => [...products, data])
       totalResultCart([...cart, data])
+      toast.success("Produto adicionado ao carrinho.")
       return
    }
 
@@ -78,12 +81,15 @@ function CartProvider({ children }: CartProviderProps) {
 
          setCart(cartList)
          totalResultCart(cartList)
+         toast.success("Produto removido do carrinho.")
          return
       }
 
       const removeItem = cart.filter(item => !(item.id === product.id && item.selectSize === size));
       setCart(removeItem)
       totalResultCart(removeItem)
+      toast.success("Produto removido do carrinho.")
+      return
 
    }
 

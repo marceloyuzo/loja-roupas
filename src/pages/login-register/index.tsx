@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { useEffect } from "react"
+import toast from "react-hot-toast"
 
 // IMPORTS PARA LIDAR COM REGISTRO E LOGIN
 import { auth } from "../../services/firebaseConnection"
@@ -17,17 +18,17 @@ import {
 
 
 const schemaLogin = z.object({
-   emailLogin: z.string().email("Insira um email válido").min(1, "O campo email é obrigatório."),
-   passwordLogin: z.string().min(1,"O campo senha é obrigatório.")
+   emailLogin: z.string().email("*").min(1, "*"),
+   passwordLogin: z.string().min(1,"*")
 })
 type FormLoginData = z.infer<typeof schemaLogin>
 
 const schemaRegister = z.object({
-   emailRegister: z.string().email("Insira um email válido").min(1, "O campo email é obrigatório."),
-   nameRegister: z.string().min(1, "O campo nome é obrigatório"),
-   lnameRegister: z.string().min(1, "O campo sobrenome é obrigatório"),
-   passwordRegister: z.string().min(1,"O campo senha é obrigatório.").min(8, "A senha é muito curta."),
-   cpasswordRegister: z.string().min(1, "Confirme a senha que digitou."),
+   emailRegister: z.string().email("*").min(1, "*"),
+   nameRegister: z.string().min(1, "*"),
+   lnameRegister: z.string().min(1, "*"),
+   passwordRegister: z.string().min(1,"*").min(8, "*"),
+   cpasswordRegister: z.string().min(1, "*"),
 })
 .refine((data) => (data.passwordRegister === data.cpasswordRegister), {
    message: "A senha não está igual.",
@@ -62,12 +63,12 @@ export function Login() {
             displayName: data.nameRegister + ` ` + data.lnameRegister
          })
 
-         console.log("CADASTRADO COM SUCESSO")
+         toast.success("Cadastro realizado com sucesso. Seja bem-vindo.")
          navigate("/", {replace:true})
       })
       .catch((error) => {
          console.log(error)
-         alert("Problema ao cadastrar o usuário, tente novamente")
+         toast.error("Problema ao cadastrar o usuário, tente novamente")
          navigate("/login", {replace:true})
       })
    }
@@ -75,12 +76,12 @@ export function Login() {
    function handleLogin(data: FormLoginData) {
       signInWithEmailAndPassword(auth, data.emailLogin, data.passwordLogin)
       .then( () => {
-         console.log("Logado com sucesso.")
+         toast.success("Login realizado com sucesso. Seja bem-vindo.")
          navigate("/", {replace:true})
       })
       .catch((error) => {
          console.log(error)
-         alert("Erro ao tentar logar, tente novamente")
+         toast.error("Erro ao tentar logar, tente novamente")
          navigate("/login", {replace:true})
       })
    }

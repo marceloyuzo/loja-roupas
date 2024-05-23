@@ -7,6 +7,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../services/firebaseConnection";
 import { CartContext } from "../../contexts/CartContext";
+import toast from "react-hot-toast";
 
 export function Header() {
    const [menuAberto, setMenuAberto] = useState(false)
@@ -33,7 +34,7 @@ export function Header() {
 
    function handleLogout() {
       signOut(auth)
-      alert("SESSÃO FINALIZADA")
+      toast.success("Sessão finalizada com sucesso. Volte sempre.")
       return
    }
 

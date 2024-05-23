@@ -11,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { apiCEP } from "../../services/api"
 import { db } from "../../services/firebaseConnection"
 import { addDoc, collection } from "firebase/firestore"
+import toast from "react-hot-toast"
 
 const PaymentMethodValues = ["PIX", "Credito", "Boleto"] as const
 const schemaOrder = z.object({
@@ -76,7 +77,7 @@ export function Cart() {
 
          
       } catch (error) {
-         console.log("ERRO AO IDENTIFICAR O CEP", error)
+         toast.error("Erro ao identificar o CEP, tente novamente.")
       }
    }
 
@@ -107,11 +108,12 @@ export function Cart() {
       })
       .then(() => {
          resetCart()
+         toast.success("Pedido realizado com sucesso. Obrigado por confiar em nossa empresa.")
          navigate("/")
       })
       .catch((error) => {
          console.log(error)
-         
+         toast.error("Algo deu errado com o pedido. Tente novamente.")
       })
    }
 
