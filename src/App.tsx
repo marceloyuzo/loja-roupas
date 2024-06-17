@@ -9,40 +9,41 @@ import { Order } from "./pages/order"
 import { Product } from "./pages/product"
 import { Private } from "./routes/Private"
 
+
 const router = createBrowserRouter([
   {
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "/login",
-        element: <Login/>
+        element: <Login />
       },
       {
         path: "/products",
-        element: <ProductList/>
+        element: <ProductList />
       },
       {
         path: "/myaccount",
-        element: <Private><MyAccount/></Private>
+        element: <Private><MyAccount /></Private>
       },
       {
         path: "/order",
-        element: <Private><Order/></Private>
+        element: <Private><Order /></Private>
       },
       {
         path: "/cart",
-        element: <Cart/>
+        element: <Cart />
       },
       {
         path: "/product/:id",
-        element: <Product/>
+        element: <Product />
       }
     ]
   }
 ])
 
-export {router}
+export { router }

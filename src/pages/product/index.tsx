@@ -1,10 +1,11 @@
 import { Container } from "../../components/Container/Container"
-import { api } from "../../services/api"
 import { ProductsProps } from "../home"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "../../contexts/CartContext"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../services/firebaseConnection"
 
 export function Product() {
    const { id } = useParams()
@@ -13,23 +14,43 @@ export function Product() {
    const [size, setSize] = useState<string>("")
 
    useEffect(() => {
-      async function getProduct() {
-         const response = await api.get(`/products/${id}`)
-         setProduct(response.data)
-      }
-      
       getProduct()
    }, [])
 
+   async function getProduct() {
+      if (id == undefined) {
+         return
+      }
+
+      const productRef = doc(db, "products", id)
+      const snapshot = await getDoc(productRef)
+
+      if (snapshot.exists()) {
+         let productInfo: ProductsProps = {
+            id: snapshot.data().id,
+            name: snapshot.data().name,
+            color: snapshot.data().color,
+            gender: snapshot.data().gender,
+            category: snapshot.data().category,
+            size: snapshot.data().size,
+            price: snapshot.data().price,
+            cover: snapshot.data().cover
+         }
+
+         setProduct(productInfo)
+         return
+      }
+   }
+
    function handleSize(selectSize: string) {
-      if(size === selectSize) {
+      if (size === selectSize) {
          setSize("")
          return
       }
       setSize(selectSize)
    }
 
-   return(
+   return (
       <Container>
          <main>
             {product && (
@@ -37,20 +58,20 @@ export function Product() {
                   <div className="flex gap-4 justify-center">
                      <div className="flex flex-col gap-4">
                         {product.cover.map((image) => (
-                           <img 
-                              src={image} 
-                              alt={product.name} 
+                           <img
+                              src={image}
+                              alt={product.name}
                               className="md:w-28 md:max-w-28 rounded-lg w-16"
                               key={image}
                            />
                         ))}
                      </div>
-                        <img src={product.cover[0]} alt={product.name} className="md:w-image md:max-w-image rounded-lg w-96"/>
+                     <img src={product.cover[0]} alt={product.name} className="md:w-image md:max-w-image rounded-lg w-96" />
                   </div>
                   <div className="flex flex-col items-start justify-start">
                      <h2 className="text-2xl mb-6">{product.name}</h2>
 
-                     <p className="text-xl mb-6">{Number(product.price).toLocaleString("pt-br", {style: "currency", currency: "BRL"})}</p>
+                     <p className="text-xl mb-6">{Number(product.price).toLocaleString("pt-br", { style: "currency", currency: "BRL" })}</p>
 
                      <div className="text-xl w-full mb-6">
                         Selecione um tamanho
@@ -61,7 +82,7 @@ export function Product() {
                         {product.size && (
                            <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
                               {product.size.map((selectSize) => (
-                                 <div 
+                                 <div
                                     className={`text-center rounded-sm w-full py-1 ${selectSize !== size ? 'bg-zinc-200' : 'bg-zinc-500'} cursor-pointer`}
                                     key={selectSize}
                                     onClick={() => handleSize(selectSize)}
@@ -75,7 +96,7 @@ export function Product() {
 
                      <p className="text-xl mb-20">Cor: {product.color}</p>
 
-                     <button 
+                     <button
                         className="text-xl bg-black text-white w-full py-3 rounded-lg"
                         onClick={() => addItemCart(product, size)}
                      >ADICIONAR AO CARRINHO</button>
